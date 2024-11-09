@@ -65,7 +65,7 @@ class MainViewmodel(application: Application) : AndroidViewModel(application) {
 
             if (dependence.size == 1) {
                 onlyDependent(dependence[0])
-                if (get(dependence[0]).checked) {
+                if (get(dependence[0]).checked && !discipline.checked) {
                     discipline.availability = true
                 } else {
                     discipline.availability = false
@@ -192,7 +192,7 @@ class MainViewmodel(application: Application) : AndroidViewModel(application) {
                     discipline.availability = true
                 } else if (get(dependence[1]).id == preRequisiteId && get(dependence[0]).checked) {
 
-                    discipline.availability = !discipline.availability
+                    discipline.availability = true
                 }
             }
 
