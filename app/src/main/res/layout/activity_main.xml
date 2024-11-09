@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".view.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="47dp">
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:contentDescription="@string/logo_description"
+            android:src="@drawable/ifpb_logo"
+            app:layout_constraintEnd_toEndOf="@id/constraint_main"
+            app:layout_constraintStart_toStartOf="@id/constraint_main"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/ads"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/constraint_main"
+            app:layout_constraintStart_toStartOf="@id/constraint_main"
+            app:layout_constraintTop_toBottomOf="@id/image_logo" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="7dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/dark_green"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_bar"
+            android:progressTint="@color/light_green"
+            app:layout_constraintEnd_toStartOf="@id/text_progress"
+            app:layout_constraintHorizontal_weight="12"
+            app:layout_constraintStart_toStartOf="@id/constraint_main"
+            app:layout_constraintTop_toBottomOf="@id/text_ads" />
+
+        <TextView
+            android:id="@+id/text_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/percentage"
+            android:textAlignment="center"
+            android:textColor="@color/light_green"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/constraint_main"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@id/progress_bar"
+            app:layout_constraintTop_toBottomOf="@id/text_ads" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_progress">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_semester_1"
+                        android:layout_width="119dp"
+                        android:layout_height="39dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/semester_1"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_algorithm"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/algorithm"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_ic"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/introduction_to_computing"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_mathematics"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/mathematics"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_plpt_1"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/plpt_1"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_english_1"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/english_1"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/text_semester_2"
+                        android:layout_width="119dp"
+                        android:layout_height="39dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/semester_2"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_english_2"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/english_2"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_poo"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/poo"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_probability"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/probability"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_graph"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/graph"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_plpt_2"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/plpt_2"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_network"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/network"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/text_semester_3"
+                        android:layout_width="119dp"
+                        android:layout_height="39dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/semester_3"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_daw_1"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/daw_1"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_methodology"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/methodology"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_eda"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/eda"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_design_patterns"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/design_patterns"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_db_1"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/db_1"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/text_semester_4"
+                        android:layout_width="119dp"
+                        android:layout_height="39dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/semester_4"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_db_2"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/db_2"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_administration"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/administration"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_rht"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/rht"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_so"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/so"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_society"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/society"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_aps"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/aps"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_daw_2"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/daw_2"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/text_semester_5"
+                        android:layout_width="119dp"
+                        android:layout_height="39dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/semester_5"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_mobile"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/mobile"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_entrepreneurship"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/entrepreneurship"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_artificial_intelligence"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/artificial_intelligence"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_daw_3"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/daw_3"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_project_1"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/project_1"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/text_semester_6"
+                        android:layout_width="119dp"
+                        android:layout_height="39dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/semester_6"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_information_security"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/information_security"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_management"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/management"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_project_2"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/project_2"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_tests"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/tests"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_optional"
+                        android:layout_width="119dp"
+                        android:layout_height="93dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/discipline_not_available_color"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/optional"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

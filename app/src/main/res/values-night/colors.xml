@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_color">#1B1E23</color>
+    <color name="text_color">#EFEFEF</color>
+    <color name="text_discipline_available_color">#EFEFEF</color>
+    <color name="light_green">#4CAF50</color>
+    <color name="dark_green">#265728</color>
+    <color name="discipline_available_color">#616161</color>
+    <color name="discipline_not_available_color">#383C42</color>
+
+</resources>
